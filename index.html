@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+	</head>
+	<body>
+				<!-- main page header -->
+		<header id="top">
+			<h1>Deep Space 9</h1>
+			<!-- navigation to jump down page or to other pages -->
+			<nav>
+				<button onclick="getDefault(0)">Clear</button>
+				<button onclick="getDefault(1)">Default #1</button>
+				<button onclick="getDefault(2)">Default #2</button>
+				<button onclick="getDefault(3)">Random</button>
+			</nav>
+		</header>
+
+		<div>
+			<div id="faceDisplay">
+				<img id="left" class="bodySections" src="Images/left0.png">
+				<div id="centerBody" class="bodySections">
+					<img id="head" src="Images/head0.png">
+					<img id="eyes" src="Images/eyes0.png">
+					<img id="nose" src="Images/nose0.png">
+					<img id="mouth" src="Images/mouth0.png">
+					<img id="feet" src="Images/feet0.png">
+				</div>
+				<img id="right"  class="bodySections" src="Images/right0.png">
+			</div>
+			<div id="componentSelect">
+				<div class="tab">
+					<button class="tabLink" onclick="openComponent(event,'headIcon')">Hat</button>
+					<button class="tabLink" onclick="openComponent(event,'eyesIcon')">Eyes</button>
+					<button class="tabLink" onclick="openComponent(event,'noseIcon')">Nose</button>
+					<button class="tabLink" onclick="openComponent(event,'mouthIcon')">Mouth</button>
+					<button class="tabLink" onclick="openComponent(event,'feetIcon')">Feet</button>
+					<button class="tabLink" onclick="openComponent(event,'armsIcon')">Arms</button>
+					<button id="itemTab" class="tabLink" onclick="openComponent(event,'itemIcon')" disabled="true">Item</button>
+				</div>
+
+				<div id="headIcon" class="tabContent">
+					<button class="componentBtn" onclick="addComponent('head', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('head', 1)">
+						<img class="icon" src="Images/head1.png">
+					</button>
+					<button class="componentBtn" onclick="addComponent('head', 2)">
+						<img class="icon" src="Images/head2.png">
+					</button>
+				</div>
+
+				<div id="eyesIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('eyes', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('eyes', 1)">
+						<img class="icon" src="Images/eyes1.png">
+					</button>
+					<button class="componentBtn" onclick="addComponent('eyes', 2)">
+						<img class="icon" src="Images/eyes2.png">
+					</button>
+				</div>
+
+				<div id="noseIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('nose', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('nose', 1)">
+						<img class="icon" src="Images/nose1.png">
+					<button class="componentBtn" onclick="addComponent('nose', 2)">
+						<img class="icon" src="Images/nose2.png">
+					</button>
+					</button>
+				</div>
+				
+				<div id="mouthIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('mouth', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('mouth', 1)">
+						<img class="icon" src="Images/mouth1.png">
+					</button>
+					<button class="componentBtn" onclick="addComponent('mouth', 2)">
+						<img class="icon" src="Images/mouth2.png">
+					</button>
+					
+				</div>
+				
+				<div id="feetIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('feet', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('feet', 1)">
+						<img class="icon" src="Images/feet1.png">
+					</button>
+					<button class="componentBtn" onclick="addComponent('feet', 2)">
+						<img class="icon" src="Images/feet2.png">
+					</button>
+				</div>
+				
+				<div id="armsIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('arms', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('arms', 1)">Present</button>
+				</div>
+				<div id="itemIcon" class="tabContent" style="display:none">
+					<button class="componentBtn" onclick="addComponent('item', 0)">None</button>
+					<button class="componentBtn" onclick="addComponent('item', 2)">
+						<img class="icon" src="Images/item1.png">
+					</button>
+					<button class="componentBtn" onclick="addComponent('item', 3)">
+						<img class="icon" src="Images/item2.png">
+					</button>
+				</div>
+			</div>
+			<div id="fileControl">
+				<input id="fileUpload" type="file" accept=".xml">
+				<button onclick="loadFile()">Upload Potato</button>
+				<button onclick="saveFile()">Save Potato</button>
+			</div>
+		</div>
+	</body>
+</html>

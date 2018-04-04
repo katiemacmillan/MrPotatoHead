@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<potato>
+	<component name="head" style="1">Images/head1.png</component>
+	<component name="eyes" style="1">Images/eyes1.png</component>
+	<component name="nose" style="1">Images/nose1.png</component>
+	<component name="mouth" style="1">Images/mouth1.png</component>
+	<component name="feet" style="1">Images/feet1.png</component>
+	<component name="left" style="1">Images/left3.png</component>
+	<component name="right" style="1">Images/right1.png</component>
+</potato>
